@@ -1,7 +1,80 @@
-  body {
-    text-rendering: optimizeLegibility;
-    height: 2000px;
-  }
+/* 1. Bug fixes and browser rendering hacks
+   ========================================================== */
+
+/* Override default box model. */
+* {
+  box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: boder-box;
+  -webkit-box-sizing: border-box;
+}
+/* Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+/* Improve readability when focused and mouse hovered on links in all browsers. */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* 2. Global styling
+   ========================================================== */
+
+body {
+  height: 2000px;
+  margin: 60px 0 0 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+  font-size: 12px;
+}
+h1,h2,h4 {
+  font-family: 'Montserrat';
+}
+h3,p {
+  font-family: 'Proxima Nova';
+}
+/* "Super titles": article titles, project titles. */
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #3c3c3c;
+}
+/* "Titles": user names, space names, channel names, project card titles. */
+h2 { 
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #5e5e5e;
+}
+/* "Taglines": user bios, space taglines, project taglines. */
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #7a797a;
+}
+/* "Subtitles": sub-navigation, collection cards (nr),  */
+h4 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: #5e5e5e;
+}
+p {
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
 
   h1 {
     font-family: 'Montserrat';
@@ -49,7 +122,7 @@
     border-radius: 100%;
     width: 34px;
     height: 34px;
-    line-height: 38px;
+    line-height: 36px;
     text-align: center;
     float: right;
     margin-right: 10px;
@@ -78,14 +151,12 @@
     width: 170px;
     height: auto;
     display: block;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 100px;
+    margin: 0 auto;
     border: 4px solid #fff;
     border-radius: 100%;
   }
   .logo {
-    width: 3.3%;
+    width: 42px;
     height: auto;
     margin-top: 8px;
     margin-left: 20px;
@@ -101,15 +172,13 @@
     width: 100%;
     height: 190px;
     display: block;
-    position: absolute;
-    left: 0;
-    top: 60px;
+    position: relative;
     background-color: #ededed;
   }
 
   .user-profile__info {
     position: relative;
-    margin: 160px auto;
+    margin: -87px auto;
   }
 
   .user-profile__info h2 {
@@ -117,7 +186,7 @@
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 22px;
-    color: #696869;
+    color: #5e5e5e;
     margin-top: 1px;
     letter-spacing: 0.1px;
   }
@@ -140,7 +209,7 @@
     line-height: 24px;
     color: #7a797a;
     margin-top: -8px;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.2px;
   }
 
   .follow-button {
@@ -150,8 +219,9 @@
     border-radius: 4px;
     margin-left: auto;
     margin-right: auto;
-    transition: background-color 0.2s ease-in-out;
     color: #0274bb;
+    transition: background-color 0.2s ease-in-out;
+    transition: color 0.1 ease-in-out;
 
   }
 
@@ -160,21 +230,21 @@
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    color: #0274bb;
     margin-top: 0;
-    line-height: 40px;
+    line-height: 36px;
     letter-spacing: 0.5px;
-    transition: color 0.1s ease-in-out;
-  }
-
-  .follow-button:hover {
-    background-color: #0274bb;
-    content: 'Following';
-    cursor: pointer;
+    color: #0274B8;
   }
 
   .follow-button h4:hover {
     color: white;
+  }
+
+  .follow-button:hover {
+    background-color: #0274bb;
+    color: #fff;
+    content: 'Following';
+    cursor: pointer;
   }
 
   .user-profile_overview-div {
@@ -221,34 +291,80 @@
     border-bottom: solid 1px #0274B8;
     margin-top: -20px;
   }
-  .projects-container {
+  .projects-wrapper {
+    position:relative;    
+    top: 120px;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2%;
+    padding-right: 2%;
+    clear:both;
+    font-family: 'Proxima Nova';
+  }
+  .project-card {
     display: inline-block;
-    margin-top: 140px;
+    width: 30%;
+    height: 330px;
+    margin-left:1.5%;
+    margin-right:1.5%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.15);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
   }
-
-  .projects-card {
-    position: relative;
-    width: 380px;
-    height: 300px;
-    border: solid 1px #ADADAD;
-    border-radius: 7px;
-    float: left;
-    margin-left: 15px;
-    margin-right: 20px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-  }
-
   .project-img {
+    width: 120%;
+    height: 240px;
+    overflow: hidden;
+  }
+  .project-info {
+    display: block;
+    position: relative;
+    clear: both;
+    height: 30px;
     width: 100%;
-    height: auto;
+    margin-top: 2px;
+    padding-right: 4%;
+    transition: top 0.5s ease-in-out;
+    font-size: 13px;
+    text-align: right;
   }
 
-  .project-img img {
+  .project-overview {
+    display: block;
+    position: relative;
     width: 100%;
-    height: auto;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 60px;
+    border-bottom: 1px solid #ededed;
+    margin: 0 auto;
   }
+
+  .project-overview h4 {
+    line-height: 0;
+    margin-top: -35px;
+    margin-left: 19%;
+    font-size: 14px;
+  }
+  .project-overview h5 {
+    line-height: 0;
+    margin-top: 22px;
+    margin-left: -8%;
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+  }
+
+  .project-profile-pic {
+    width: 46px;
+    margin-top: 6px;
+    margin-left: 5%
+  }
+
+
 
 
 
@@ -398,8 +514,8 @@
 
   .collections-wrapper {
     position:relative;    
-    top: 100px;
-    width: 85%;
+    top: 220px;
+    width: 97%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 2%;
@@ -410,10 +526,10 @@
 
   .collection-featured {
     display: inline-block;
-    width: 28%;
-    height: 314px;
-    margin-left:2%;
-    margin-right:2%;
+    width: 30%;
+    height: 356px;
+    margin-left:1.5%;
+    margin-right:1.5%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
@@ -430,12 +546,12 @@
   .featured-img-collection {
     width: 100%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    height: 185px;
+    height: 210px;
     overflow: hidden;
   }
 
-  .featured-img-collection img {
-    width:100%;
+  .featured-img-collection img, .project-img img {
+    width:120%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow: hidden;
@@ -473,29 +589,24 @@
   }
   .featured-thumbnail-collection li {
     margin-top: 2px;
-    width: 49%;
+    width: 49.5%;
     display: inline-block;
-    height: 100px;
+    height: 120px;
     overflow: hidden;
   }
 
-  .featured-thumbnail-collection li:first-child{
-    margin-right: 1px;
-  }
-
  .featured-thumbnail-collection li:last-child{
-    margin-left: 1px;
+    float: right;
   }
 
  .featured-thumbnail-collection li img {
-    width: 100%;
+    width: 110%;
   }
 
  .collection-info {
-    bottom:inherit;
     position: relative;
     clear: both;
-    height: 24px;
+    height: 28px;
     width: 100%;
     margin-top: -8px;
     padding-right: 2%;
@@ -505,16 +616,17 @@
     text-align: right;
  }
 
-  .collection-info i, .collection-info p {
+  .collection-info i, .collection-info p, .project-info i, .project-info p {
         display: inline-block;
         color: #696869;
         margin-top:7px;
+        font-size: 14px;
   }
 
-  .collection-info i {
+  .collection-info i, .project-info i {
     margin-left: 1%;
   }
 
-   .collection-info p {
+   .collection-info p, .project-info i {
     margin-right: 3%;
    }
