@@ -2,7 +2,8 @@
   "version": "0.0.1",
   "dependencies": {"mercury": "^12.0.0",
 		  "global":"^4.2.1",
-		  "geval":"^2.1.1"},
+		  "geval":"^2.1.1",
+      "react":"^0.12.2"},
   "main":"./src/browser.coffee",
   "devDependencies": {
       "watchify": "^2.2.1",

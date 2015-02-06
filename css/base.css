@@ -29,11 +29,12 @@ body {
   text-rendering: optimizeLegibility;
   font-size: 12px;
 }
-h1,h2,h4 {
+h1,h2,h4,h5 {
   font-family: 'Montserrat';
 }
 h3,p {
   font-family: 'Proxima Nova';
+  font-weight: 400;
 }
 /* "Super titles": article titles, project titles. */
 h1 {
@@ -44,16 +45,17 @@ h1 {
 }
 /* "Titles": user names, space names, channel names, project card titles. */
 h2 { 
-  font-size: 26px;
+  font-size: 1.8vw;
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.04vw;
+  line-height: 2vw;
   color: #5e5e5e;
 }
 /* "Taglines": user bios, space taglines, project taglines. */
 h3 {
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 0.2px;
+  font-size: 1.6vw;
+  letter-spacing: 0.02vw;
+  line-height: 1.8vw;
   color: #7a797a;
 }
 /* "Subtitles": sub-navigation, collection cards (nr),  */
@@ -63,26 +65,24 @@ h4 {
   letter-spacing: 0.1px;
   color: #5e5e5e;
 }
+/* "Body": articles, */
 p {
   font-size: 20px;
+}
+h5 {
+  font-size: 1vw;
+  font-weight: 400;
+  letter-spacing: 0.04vw;
 }
 
 
 
 
 
-
-
-
-
-
-  h1 {
-    font-family: 'Montserrat';
-    font-size: 18px;
-    font-weight: 400;
-    color: #595859;
-  }
+/* Initial CSS styling. To be seen as starting point for inline styling of React components. 
+   ========================================================================================== */
   
+  /*  ------HEADER------ */
   header {
     height: 60px;
     width: 100%;
@@ -94,7 +94,17 @@ p {
     z-index: 10;
     background-color: #F9FCFD; 
   }
-
+  .logo {
+    width: 42px;
+    height: auto;
+    margin-top: 8px;
+    margin-left: 20px;
+    opacity: 0.8;
+  }
+  .logo:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
   .ion-ios7-search-strong {
     font-size: 21px;
     color: #ADADAD;
@@ -108,13 +118,11 @@ p {
     margin-right: 10px;
     margin-top: 11px;
   }
-
   .ion-ios7-search-strong:hover {
     color: #0274B8;
     border: 1px solid #0274B8;
     cursor: pointer;
   }
-
   .ion-android-add {
     font-size: 14px;
     color: #ADADAD;
@@ -128,14 +136,12 @@ p {
     margin-right: 10px;
     margin-top: 11px;
   }
-
   .ion-android-add:hover {
     color: #0274B8;
     border: 1px solid #0274B8;
     cursor: pointer;
   }
-
-  .profile-pic {
+  .profile-pic--thumb {
     width: 38px;
     height: 38px;
     float: right;
@@ -143,107 +149,80 @@ p {
     margin-right: 20px;
     opacity: 0.8;
   }
-  .profile-pic:hover {
+  .profile-pic--thumb:hover {
     opacity: 1;
     cursor: pointer;
   }
   .profile-pic--large {
-    width: 170px;
+    width: 14vw;
     height: auto;
     display: block;
     margin: 0 auto;
-    border: 4px solid #fff;
+    border: 0.4vw solid #fff;
     border-radius: 100%;
   }
-  .logo {
-    width: 42px;
-    height: auto;
-    margin-top: 8px;
-    margin-left: 20px;
-    opacity: 0.8;
-  }
 
-  .logo:hover {
-    cursor: pointer;
-    opacity: 0.9;
-  }
-
+  /*----- USER PROFILE  ------ */
   .user-profile__hero {
-    width: 100%;
-    height: 190px;
+    width: 100vw;
+    height: 15vw;
     display: block;
     position: relative;
     background-color: #ededed;
   }
 
-  .user-profile__info {
+  .user-profile__overview {
     position: relative;
-    margin: -87px auto;
+    margin: -7vw auto;
   }
 
-  .user-profile__info h2 {
+  .user-profile__overview h2 {
     text-align: center;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 22px;
     color: #5e5e5e;
-    margin-top: 1px;
-    letter-spacing: 0.1px;
+    margin-top: -0.1vw;
   }
 
-  .user-profile__info h5 {
+  .user-profile__overview h5 {
     text-align: center;
-    font-family: 'Montserrat';
-    font-weight: 400;
-    font-size: 12px;
     color: #7a797a;
-    margin-top: -18px;
-    letter-spacing: 0.4px;
+    margin-top: -1.5vw;
   }
 
-  .user-profile__info h3 {
+  .user-profile__overview h3 {
     text-align: center;
-    font-family: 'Proxima Nova';
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
     color: #7a797a;
-    margin-top: -8px;
-    letter-spacing: 0.2px;
+    margin-top: -0.75vw;
+    letter-spacing: 0.02vw;
   }
 
   .follow-button {
-    width: 160px;
-    height: 40px;
-    border: 2px solid #0274bb;
+    width: 12.5vw;
+    height: 3.2vw;
+    border: 0.2vw solid #0274bb;
     border-radius: 4px;
     margin-left: auto;
     margin-right: auto;
     color: #0274bb;
     transition: background-color 0.2s ease-in-out;
-    transition: color 0.1 ease-in-out;
 
   }
 
   .follow-button h4 {
     font-family: 'Montserrat';
-    font-size: 16px;
+    font-size: 1.25vw;
     font-weight: 400;
     text-align: center;
-    margin-top: 0;
-    line-height: 36px;
+    margin-top: 0.6vw;
     letter-spacing: 0.5px;
     color: #0274B8;
   }
 
-  .follow-button h4:hover {
+  .follow-button:hover h4 {
     color: white;
   }
 
   .follow-button:hover {
     background-color: #0274bb;
-    color: #fff;
-    content: 'Following';
     cursor: pointer;
   }
 
@@ -253,13 +232,13 @@ p {
     height: 60px;
   }
 
-  .user-profile__overview {
+  .user-profile__summary {
     list-style: none;
     display: inline-block;
     padding-left: 0px;
   }
 
-  .user-profile__overview h6 {
+  .user-profile__summary h6 {
     font-family: 'Proxima Nova';
     font-weight: 400;
     font-size: 32px;
@@ -267,7 +246,7 @@ p {
     color: #7a797a;
   }
 
-  .user-profile__overview h4 {
+  .user-profile__summary h4 {
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 17px;
@@ -277,12 +256,12 @@ p {
     text-align: center;
   }
 
-  .user-profile__overview h4:hover{
+  .user-profile__summary h4:hover{
     color: #696869;
     cursor: pointer;
   }
 
-  .user-profile__overview li {
+  .user-profile__summary li {
     float: left;
     width: 100px;
     text-align: center;
@@ -291,10 +270,12 @@ p {
     border-bottom: solid 1px #0274B8;
     margin-top: -20px;
   }
+
+  /* ----- PROJECTS-------*/
   .projects-wrapper {
     position:relative;    
-    top: 120px;
-    width: 97%;
+    top: 200px;
+    width: 97vw;
     margin-left: auto;
     margin-right: auto;
     padding-left: 2%;
@@ -304,33 +285,29 @@ p {
   }
   .project-card {
     display: inline-block;
-    width: 30%;
-    height: 330px;
-    margin-left:1.5%;
-    margin-right:1.5%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    width: 28vw;
+    height: 28vw;
+    margin-left:1vw;
+    margin-right:1vw;
+    border-radius: 7px;
     box-shadow: 0 3px 3px rgba(0,0,0,0.15);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     overflow: hidden;
   }
   .project-img {
-    width: 120%;
-    height: 240px;
+    max-width: 110%;
+    height: 20vw;
     overflow: hidden;
   }
   .project-info {
     display: block;
     position: relative;
     clear: both;
-    height: 30px;
+    height: 3.3vw;
     width: 100%;
-    margin-top: 2px;
     padding-right: 4%;
     transition: top 0.5s ease-in-out;
-    font-size: 13px;
     text-align: right;
+    /*background-color: #cc0000;*/
   }
 
   .project-overview {
@@ -339,36 +316,41 @@ p {
     width: 100%;
     margin-left: 3%;
     margin-right: 3%;
-    height: 60px;
+    height: 5vw;
     border-bottom: 1px solid #ededed;
     margin: 0 auto;
   }
 
+  .project-overview-text {
+    width: 82%;
+    float: right;
+    display: block;
+    height: 5vw;
+    /*background-color: #ededed;*/
+  }
+
   .project-overview h4 {
     line-height: 0;
-    margin-top: -35px;
-    margin-left: 19%;
-    font-size: 14px;
+    font-size: 1.1vw;
   }
   .project-overview h5 {
     line-height: 0;
-    margin-top: 22px;
-    margin-left: -8%;
     font-family: 'Proxima Nova';
-    font-size: 14px;
+    font-size: 1vw;
+    margin-top: 1.8vw;
+    margin-left: 0.1vw;
+    text-align: left;
+    color: #7a797a;
+    font-weight: 400;
   }
 
   .project-profile-pic {
-    width: 46px;
-    margin-top: 6px;
-    margin-left: 5%
+    width: 3.5vw;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
   }
 
-
-
-
-
-
+  /*  -------CHAT------- */
   ul {
     list-style: none;
     padding:0;
@@ -508,13 +490,11 @@ p {
     font-weight: bold;
     transition: opacity 0.2s ease-in-out;
   }
-
-
-/* COLLECTIONS */
+/*-------COLLECTIONS--------------- */
 
   .collections-wrapper {
     position:relative;    
-    top: 220px;
+    top: 280px;
     width: 97%;
     margin-left: auto;
     margin-right: auto;
@@ -532,8 +512,7 @@ p {
     margin-right:1.5%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);    
+    box-shadow: 0 3px 3px rgba(0,0,0,0.15);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     overflow: hidden;
@@ -574,7 +553,7 @@ p {
   .featured-img-collection p {
     position:absolute;
     color: #fff;
-    font-size: 21px;
+    font-size: 2px;
     font-weight: 400;
     z-index: 1000;
     margin-top: 110px;
@@ -619,14 +598,14 @@ p {
   .collection-info i, .collection-info p, .project-info i, .project-info p {
         display: inline-block;
         color: #696869;
-        margin-top:7px;
-        font-size: 14px;
+        margin-top: 0.8vw;
+        font-size: 1.3vw;
   }
 
   .collection-info i, .project-info i {
-    margin-left: 1%;
+    margin-left: 1vw;
   }
 
    .collection-info p, .project-info i {
-    margin-right: 3%;
+    margin-right: 0.4vw;
    }
