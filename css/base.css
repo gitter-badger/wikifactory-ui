@@ -27,7 +27,6 @@ body {
   margin: 60px 0 0 0;
   padding: 0;
   text-rendering: optimizeLegibility;
-  font-size: 12px;
 }
 h1,h2,h4,h5 {
   font-family: 'Montserrat';
@@ -185,7 +184,7 @@ h5 {
   .user-profile__overview h5 {
     text-align: center;
     color: #7a797a;
-    margin-top: -1.5vw;
+    margin-top: -1.3vw;
   }
 
   .user-profile__overview h3 {
@@ -212,7 +211,7 @@ h5 {
     font-size: 1.25vw;
     font-weight: 400;
     text-align: center;
-    margin-top: 0.6vw;
+    margin-top: 0.7vw;
     letter-spacing: 0.5px;
     color: #0274B8;
   }
@@ -227,9 +226,8 @@ h5 {
   }
 
   .user-profile_overview-div {
-    width: 540px;
+    width: 42vw;
     margin: 0px auto;
-    height: 60px;
   }
 
   .user-profile__summary {
@@ -241,17 +239,16 @@ h5 {
   .user-profile__summary h6 {
     font-family: 'Proxima Nova';
     font-weight: 400;
-    font-size: 32px;
-    line-height: 0px;
+    font-size: 2.6vw;
     color: #7a797a;
   }
 
   .user-profile__summary h4 {
     font-family: 'Montserrat';
     font-weight: 400;
-    font-size: 17px;
+    font-size: 1.4vw;
     color: #7a797a;
-    margin-top: -50px;
+    margin-top: -5vw;
     margin-bottom: 10px;
     text-align: center;
   }
@@ -263,10 +260,10 @@ h5 {
 
   .user-profile__summary li {
     float: left;
-    width: 100px;
+    width: 8vw;
     text-align: center;
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 3vw;
+    margin-left: 3vw;
     border-bottom: solid 1px #0274B8;
     margin-top: -20px;
   }
@@ -274,7 +271,7 @@ h5 {
   /* ----- PROJECTS-------*/
   .projects-wrapper {
     position:relative;    
-    top: 200px;
+    top: 14vw;
     width: 97vw;
     margin-left: auto;
     margin-right: auto;
@@ -331,13 +328,14 @@ h5 {
 
   .project-overview h4 {
     line-height: 0;
-    font-size: 1.1vw;
+    font-size: 1vw;
+    margin-top: 1.5vw;
   }
   .project-overview h5 {
     line-height: 0;
     font-family: 'Proxima Nova';
-    font-size: 1vw;
-    margin-top: 1.8vw;
+    font-size: 1.1vw;
+    margin-top: 1.7vw;
     margin-left: 0.1vw;
     text-align: left;
     color: #7a797a;
@@ -349,6 +347,19 @@ h5 {
     margin-top: 0.5vw;
     margin-left: 1vw;
   }
+
+  .show-more h5 {
+    text-align: center;
+    position: relative;
+    top: 15vw;
+    color: #7a797a;
+  }
+
+  .show-more h5:hover {
+    color: #5e5e5e;
+    cursor: pointer;
+  }
+
 
   /*  -------CHAT------- */
   ul {
@@ -494,8 +505,8 @@ h5 {
 
   .collections-wrapper {
     position:relative;    
-    top: 280px;
-    width: 97%;
+    top: 18vw;
+    width: 97vw;
     margin-left: auto;
     margin-right: auto;
     padding-left: 2%;
@@ -506,10 +517,10 @@ h5 {
 
   .collection-featured {
     display: inline-block;
-    width: 30%;
-    height: 356px;
-    margin-left:1.5%;
-    margin-right:1.5%;
+    width: 28vw;
+    height: 30vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0 3px 3px rgba(0,0,0,0.15);
@@ -525,7 +536,7 @@ h5 {
   .featured-img-collection {
     width: 100%;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    height: 210px;
+    height: 17vw;
     overflow: hidden;
   }
 
@@ -540,14 +551,13 @@ h5 {
   .featured-img-collection h3 {
     position:absolute;
     color: #fff;
-    font-size: 28px;
-    z-index: 100;
-    margin-top: 80px;
-    width:14%;
+    font-size: 2.3vw;
+    margin-top: 7vw;
+    width:15%;
     margin-left: 6.5%;
     margin-right: 6.5%;
-    text-align: center;
     letter-spacing: 1px;
+    text-align: center;
   }
 
   .featured-img-collection p {
@@ -564,13 +574,13 @@ h5 {
   }
 
   .featured-thumbnail-collection ul {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #ededed;
   }
   .featured-thumbnail-collection li {
     margin-top: 2px;
     width: 49.5%;
     display: inline-block;
-    height: 120px;
+    height: 10vw;
     overflow: hidden;
   }
 
@@ -579,20 +589,19 @@ h5 {
   }
 
  .featured-thumbnail-collection li img {
-    width: 110%;
+    width: 115%;
   }
 
  .collection-info {
+    display: block;
     position: relative;
     clear: both;
-    height: 28px;
+    height: 3.3vw;
     width: 100%;
-    margin-top: -8px;
-    padding-right: 2%;
+    padding-right: 4%;
     transition: top 0.5s ease-in-out;
-    background-color: #f9fcfd;
-    font-size: 13px;
     text-align: right;
+    margin-top: -0.3vw;
  }
 
   .collection-info i, .collection-info p, .project-info i, .project-info p {
@@ -609,3 +618,15 @@ h5 {
    .collection-info p, .project-info i {
     margin-right: 0.4vw;
    }
+
+   .collection-show-more h5 {
+    text-align: center;
+    position: relative;
+    top: 19vw;
+    color: #7a797a;
+  }
+
+  .collection-show-more h5:hover {
+    color: #5e5e5e;
+    cursor: pointer;
+  }
