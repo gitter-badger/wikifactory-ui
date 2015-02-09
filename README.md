@@ -11,3 +11,6 @@
 5.  In the browser go to:
 
      > file://path/to/repo/index.html
+
+
+[![Join the chat at https://gitter.im/wikifactory/wikifactory-ui](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/wikifactory/wikifactory-ui?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
