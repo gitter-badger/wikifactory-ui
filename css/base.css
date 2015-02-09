@@ -272,11 +272,11 @@ h5 {
   .projects-wrapper {
     position:relative;    
     top: 14vw;
-    width: 97vw;
+    width: 96vw;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 2vw;
+    padding-right: 2vw;
     clear:both;
     font-family: 'Proxima Nova';
   }
@@ -516,11 +516,11 @@ h5 {
   .collections-wrapper {
     position:relative;    
     top: 18vw;
-    width: 97vw;
+    width: 96vw;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 2vw;
+    padding-right: 2vw;
     clear:both;
     font-family: 'Proxima Nova';
   }
