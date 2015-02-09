@@ -377,34 +377,38 @@ h5 {
     clear:both;
     position: fixed;
     bottom: 0px;
-    height: 36px;
-    width: 100%;
+    height: 32px;
+    width: 100vw;
     font-family: 'Proxima Nova';
     background-color: #f9fcfd;
     transition: top 0.5s ease-in-out;
     box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
   }
-
-
   .chat-levels {
-    padding-left: 10px;
+    padding-left: 1%%;
     padding-right: 0;
     margin:0;
-    width:9%;
+    width:11vw;
   }
 
+  .chat-levels ul {
+    width:97%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
   .chat-levels li {
+    width: 30%;
     display: inline-block;
     cursor: pointer;
     padding-top: 6px;
     padding-bottom:5px;
-    padding-left: 5px;
+    height: 32px;
     color: #696869;
     font-weight: bold;
   }
    .chat-levels h3 {
     float:left;
-    font-size: 26px;
+    font-size: 1.9vw;
     font-weight: bold;
     color: #7A797A;
     z-index: 100;
@@ -412,39 +416,40 @@ h5 {
     margin:0;
   }
 
-  .chat-levels li:nth-child(1) {
-    padding-right: 5px;
-  }
 
   .chat-levels li:nth-child(3) {
     box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
+    padding-right: 8%;
+  }
+
+    .chat-levels li:nth-child(2) {
+    padding-left: 2%;
   }
 
  .chat-level-notification {
     color: #fff;
-    width:8px;
-    float:right;
-    font-size: 9px;
-    padding-left: 3px;
-    margin-left: -4px;
-    border-radius: 9px;
+    width:11px;
+    float:left;
+    font-size: 0.8vw;
+    font-weight: 400;
+    padding-left: 7%;
+    border-radius:10px;
+    margin-left: -2px;
     background-color: #e74c3c;
     top:0;
     z-index: 1000;
   }
 
-  .chat-level-space .chat-level-notification {
-    margin-right:6px;
-  }
+
 
   .chat-tab {
     position: fixed;
-    height: 36px;
+    height: 34px;
     bottom: 0;
-    left: 8.5%;
+    left: 11vw;
     display: inline-block;
     float:right;
-    width:92%;
+    width:92vw;
     position-bottom: 0;
     z-index: 100;
 
@@ -453,7 +458,7 @@ h5 {
   .chat-tab li {
     display: inline-block;
     cursor: pointer;
-    width:14%;
+    width:19%;
     color: #7A797A;
     font-weight: bold;
     box-shadow: 1px 0 3px rgba(0, 0, 0, 0.1);
@@ -462,7 +467,7 @@ h5 {
 
   .chat-tab h4 {
     float:left;
-    font-size: 14px;
+    font-size: 1.1vw;
     font-weight: 400;
     margin-top: 11px;
     padding-left: 8%;
@@ -471,23 +476,27 @@ h5 {
   }
 
   .tab-notification {
+    position: absolute;
     color: #fff;
-    width:9px;
+    display: inline-block;
+    width:12px;
     float:left;
-    font-size: 9px;
+    font-size: 0.8vw;
+    font-weight: 400;
     margin-top: 14px;
-    margin-left: 8px;
-    padding-left: 4.5px;
-    border-radius: 2px;
+    margin-left: 0.5%;
+    padding-left: 3px;
+    border-radius: 3px;
     background-color: #e74c3c;
   }
 
   .close-tab {
     font-size: 14px;
+    display: inline-block;
     width: 13px;
     border-radius: 9px;
     margin-right: 5%;
-    margin-top: 14px;
+    margin-top: 12px;
     padding-left:3px;
     font-weight: 400;
     float:right;
@@ -501,6 +510,7 @@ h5 {
     font-weight: bold;
     transition: opacity 0.2s ease-in-out;
   }
+
 /*-------COLLECTIONS--------------- */
 
   .collections-wrapper {
@@ -630,3 +640,201 @@ h5 {
     color: #5e5e5e;
     cursor: pointer;
   }
+
+  .stories-row-first {
+    position: relative;
+    margin-top: 280px;
+    clear:both;
+    padding-top: 20px;
+    display: block;
+    padding-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: 100%;
+   }
+
+  .stories-row-first::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    z-index:-1;
+    background: url(http://static1.squarespace.com/static/52d04503e4b03e8b46ffc511/t/539713cbe4b022c47e60e742/1402409933710/form1_plus_3d_printer);
+    background-size: 100%;
+    opacity: 0.7;
+   }
+
+  .stories-row-first:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out;
+   }
+
+  .stories-row-second {
+    clear:both;
+    padding-top: 30px;
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: 100%;
+   }
+
+  .stories-row-second::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    z-index:-1;
+    background: url(http://makezineblog.files.wordpress.com/2013/07/sip06-robohand-white.jpg) no-repeat;
+    background-size: 100%;
+    opacity: 0.7;
+   }
+
+ .stories-row-second:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out;
+   }
+
+  .stories-row-third {
+    clear:both;
+    padding-top: 30px;
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    background-size: 100%;
+   }
+
+ .stories-row-third::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    z-index:-1;
+    background: url(http://replicatorinc.com/blog/wp-content/uploads/2008/10/a_ring_made_for_3d_wax.jpg) no-repeat;
+    background-size: 100%;
+    opacity: 0.7;
+   }
+
+ .stories-row-third:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease-in-out;
+   }
+   .stories-wrapper {
+    position:relative;    
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Proxima Nova';
+    margin-top: 100px;
+   }
+
+  .stories-featured {
+    text-align: center;
+  }
+
+
+  .stories-featured h1 {
+    font-weight: bold;
+    font-size: 3.2vw;
+    letter-spacing: 1px;
+    font-family: 'Montserrat';
+    line-height: 1.2;
+    color: #3c3c3c;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+   }
+
+  .stories-featured h2 {
+    font-weight: 200;
+    font-size: 2vw;
+    letter-spacing: 0.5px;
+    font-family: 'Montserrat';
+    line-height: 1.4;
+    color: #3c3c3c;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+
+   }
+
+   .stories-featured p {
+    display: inline-block;
+    margin-top: 0;
+    color: #3c3c3c;
+    font-weight: 400;
+    text-align: left;
+    line-height: 2;
+   }
+
+   .stories-featured i {
+    margin-right: 8px;
+    font-size: 16px;
+   }
+
+    br {
+      height:20px;
+    }
+
+    .stories-content {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-tags {
+      position: absolute;
+      width: 30%;
+      margin-top: 15px;
+      z-index: 100;
+    }
+
+    .card-tags ul {
+      float: left;
+    }
+
+    .card-tags li {
+      float:right;
+      top: inherit;
+      height:26px;
+      font-family: 'Proxima Nova';
+      color: #fff;
+      font-size: 1vw;
+      padding-left: 5px;
+      padding-top: 6px;
+      position: relative;
+      clear:both;
+      width:100px;
+    }
+
+    .card-tags li:first-child {
+      position: relative;
+      margin-left: -8px;
+      clear:both;
+      background-color: #ADADAD;
+      border-left: 8px solid #0274B8;
+    }
+
+    .card-tags li:first-child:hover {
+      background-color: #0274B8;
+      transition: background-color 0.1s ease-in-out;
+      color: #fff;
+    }
+
+    .card-tags li:nth-child(2) {
+      float: left;
+      width:80px;
+      padding: 0;
+      margin-left: -5px;
+      border-left: 5px solid #4d9dcd;
+    }
+
+     .card-tags li:nth-child(3) {
+      margin-left: -3px;
+      float: left;
+      padding: 0;
+      width:80px;
+      border-left: 3px solid #b3d5e9;
+    }
